@@ -1,0 +1,5 @@
+@media screen and (max-width: 992px) {
+    .code-wrapper,.code-box{
+        width: 100%;
+    }
+}

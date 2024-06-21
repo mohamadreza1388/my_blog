@@ -1,0 +1,200 @@
+@import "../node_modules/normalize.css/normalize.css";
+@import "../node_modules/bootstrap/dist/css/bootstrap.rtl.min.css";
+@import "fontawesome.min.css";
+@import "solid.css";
+@import "brands.css";
+
+@font-face {
+    font-family: "iranyekan";
+    font-weight: 100;
+    src: local("Example"), url("../fonts/iranyekan/Qs_Iranyekan thin.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "iranyekan";
+    font-weight: 200;
+    src: local("Example"), url("../fonts/iranyekan/Qs_Iranyekan light.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "iranyekan";
+    font-weight: 400;
+    src: local("Example"), url("../fonts/iranyekan/Qs_Iranyekan.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "iranyekan";
+    font-weight: 700;
+    src: local("Example"), url("../fonts/iranyekan/Qs_Iranyekan bold.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "iranyekan";
+    font-weight: 750;
+    src: local("Example"), url("../fonts/iranyekan/Qs_Iranyekan black.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "iranyekan";
+    font-weight: 800;
+    src: local("Example"), url("../fonts/iranyekan/Qs_Iranyekan extrabold.ttf") format("truetype");
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "iranyekan";
+    font-weight: 900;
+    src: local("Example"), url("../fonts/iranyekan/Qs_Iranyekan extrablack.ttf") format("truetype");
+    font-display: swap;
+}
+
+:root {
+    --color1: #F05033;
+    --color2: rgb(253, 253, 253);
+    --code-box-header: #1A1A1A;
+    --code-box-main: #333333;
+    --code-box-hover: #535353;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "iranyekan", sans-serif;
+
+    ::selection {
+        background-color: var(--color1);
+        color: white;
+    }
+}
+
+body, html {
+    scroll-behavior: smooth;
+}
+
+body {
+    direction: rtl;
+    max-width: 1700px;
+    background-color: var(--color2);
+    margin-bottom: 60px;
+}
+
+body::-webkit-scrollbar {
+    width: 9px;
+    background-color: #ececec;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--color1);
+    border-radius: 1000px;
+}
+
+div.my-container {
+    width: 95%;
+    margin: 0 auto;
+}
+
+a:link,
+a:visited {
+    text-decoration: none;
+    display: inline-block;
+}
+
+ul.list-style-none {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.pos-center {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+}
+
+.top-header {
+    height: 90px;
+}
+
+.logo:is(:link,:visited) {
+    width: fit-content;
+    z-index: 1;
+}
+
+.logo:is(:link,:visited)::before,
+.logo:is(:link,:visited)::after {
+    content: "";
+    display: inline-block;
+    height: 1px;
+    background-color: #cccccc;
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    z-index: -1;
+}
+
+.logo:is(:link,:visited)::before {
+    right: 108%;
+}
+
+.logo:is(:link,:visited)::after {
+    left: 108%;
+}
+
+.logo:is(:link,:visited) img {
+    width: 80px;
+}
+
+.code-box {
+    border: 1px solid gray;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 4px 8px;
+    width: 800px;
+    background-color: var(--code-box-main);
+}
+
+.code-box .header {
+    height: 45px;
+    background-color: var(--code-box-header);
+}
+
+.code-box .content {
+    direction: ltr;
+    color: rgba(255, 255, 255, 0.83);
+}
+
+.copy-btn {
+    background-color: var(--code-box-main);
+    font-size: 13px;
+    padding: 5px 8px;
+    transition: all 200ms;
+    width: 88px;
+    height: 30px;
+}
+
+.copy-btn:hover {
+    background-color: var(--code-box-hover);
+}
+
+.code_tag {
+    font-size: 17px;
+}
+
+button.dot {
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+}
+
+.btn-wrapper {
+    gap: 7px;
+}
+
+.gold {
+    color: gold !important;
+}
