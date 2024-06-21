@@ -154,7 +154,7 @@ ul.list-style-none {
 .code-box {
     border: 1px solid gray;
     box-shadow: rgba(0, 0, 0, 0.2) 0 4px 8px;
-    width: 800px;
+    width: 100%;
     background-color: var(--code-box-main);
 }
 

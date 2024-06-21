@@ -159,7 +159,7 @@ $(function () {
         <div class="code-box overflow-hidden rounded-3 mt-4">
             <div class="header d-flex justify-content-between align-items-center px-2 user-select-none">
                 <div class="btn-wrapper d-flex justify-content-center align-items-center">
-                    <button class="dot border-0 bg-danger" type="button"></button>
+                    <button class="dot border-0 bg-danger close-btn" type="button"></button>
                     <button class="dot border-0 bg-warning" type="button"></button>
                     <button class="dot border-0 bg-success" type="button"></button>
                 </div>
@@ -185,4 +185,9 @@ $(function () {
         let final_text = text.replace(/git/g,'<span class="gold">git</span>')
         $(".code_tag").eq(i).html(final_text)
     }
+
+    $(".close-btn").click(function () {
+        $(this).closest(".code-wrapper").slideUp(500)
+    })
+
 })
