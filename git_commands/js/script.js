@@ -36,6 +36,118 @@ $(function () {
             title: "نمایش تغییرات انجام شده",
             code: `git diff`
         },
+        {
+            title: "راهنما دستور مدنظر در گوگل",
+            code: `git [نام دستور] --help`
+        },
+        {
+            title: "راهنما دستور مدنظر در پنجره کنسولی",
+            code: `git [نام دستور] -help`
+        },
+        {
+            title: "نمایش جزئیات یک کامیت",
+            code: `git show [شناسه کامیت]`
+        },
+        {
+            title: "نمایش لیست شاخه ها",
+            code: `git branch`
+        },
+        {
+            title: "ساخت شاخه جدید",
+            code: `git branch [اسم شاخه]`
+        },
+        {
+            title: "تغییر نام یک شاخه",
+            code: `git branch -m [نام فعلی شاخه] [نام جدید شاخه]`
+        },
+        {
+            title: "تغییر نام یک شاخه",
+            code: `git branch -d [اسم شاخه]`
+        },
+        {
+            title: "رفتن به یک شاخه (سوئیچ)",
+            code: `git checkout [اسم شاخه]`
+        },
+        {
+            title: "رفتن به یک کامیت",
+            code: `git checkout [اسم کامیت]`
+        },
+        {
+            title: "اعمال تغییرات یک شاخه دیگر روی شاخه ای که در ان هستیم",
+            code: `git merge [اسم شاخه]`
+        },
+        {
+            title: "نگهداری تغییراتی که هنوز کامیت نشده",
+            code: `git stash`
+        },
+        {
+            title: "ذخیره یک پیغام همراه با استش کردن",
+            code: `git stash save "پیام مورد نظر"`
+        },
+        {
+            title: "نمایش تغییرات استش",
+            code: `git stash show -p [نام استش]`
+        },
+        {
+            title: "حذف استش",
+            code: `git stash drop [نام استش]`
+        },
+        {
+            title: "تغییرات را از استش تبدیل به اتیج میکند و روی استش عملیاتی انجام میدهد",
+            code: `git stash apply [نام استش]\ngit stash pop [نام استش]`
+        },
+        {
+            title: "نشان میدهد چه کسی چه تغییری در فایل به وجود اورده",
+            code: `git blame [ادرس فایل]`
+        },
+        {
+            title: "نمایش لیست تگ ها",
+            code: `git tag`
+        },
+        {
+            title: "ایجاد یک تگ",
+            code: `git tag [اسم تگ] [ایدی کامیت]`
+        },
+        {
+            title: "حذف یک برچسب",
+            code: `git tag -d [اسم برچسب]`
+        },
+        {
+            title: "ارسال برچسب به مخازن دور",
+            code: `git push origin [نام برچسب]`
+        },
+        {
+            title: "حذف برچسب از مخازن دور",
+            code: `git push origin --delete [نام برچسب]`
+        },
+        {
+            title: "کپی گرفتن از مخزن روی سیستم لوکال",
+            code: `git clone [ادرس اینترنتی مخزن روی گیتهاب]`
+        },
+        {
+            title: "اتصال به مخزن انلاین",
+            code: `git remote add origin [ادرس پروژه روی گیتهاب]`
+        },
+        {
+            title: "قطع ارتباط با مخزن انلاین",
+            code: `git remote remove origin [ادرس پروژه روی گیتهاب]`
+        },
+        {
+            title: "لیست مخزن هایی که با انها ارتباط برقرار شده",
+            code: `git remote -v`
+        },
+        {
+            title: "اپلود روی گیتهاب",
+            code: `git push [نام ریموت] [نام شاخه]`
+        },
+        {
+            title: "اعمال تغییرات انجام شده در گیتهاب روی پروژه",
+            code: `git pull [نام ریموت] [نام شاخه]`
+        },
+        {
+            title: "نمایش تغییراتی که در مخزن انلاین رخ داده",
+            code: `git fetch origin`
+        }
     ]
 
     // --------------------------------------------------------------------
@@ -73,6 +185,4 @@ $(function () {
         let final_text = text.replace(/git/g,'<span class="gold">git</span>')
         $(".code_tag").eq(i).html(final_text)
     }
-
-
 })
