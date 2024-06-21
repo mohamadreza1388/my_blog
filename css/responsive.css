@@ -1,5 +1,29 @@
+@media screen and (max-width: 1200px) {
+    .logo:is(:link,:visited)::before,
+    .logo:is(:link,:visited)::after{
+        width: 430px;
+    }
+}
 @media screen and (max-width: 992px) {
     .code-wrapper,.code-box{
         width: 100%;
+    }
+    .logo:is(:link,:visited)::before,
+    .logo:is(:link,:visited)::after{
+        width: 320px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .logo:is(:link,:visited)::before,
+    .logo:is(:link,:visited)::after{
+        width: 200px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .logo:is(:link,:visited)::before,
+    .logo:is(:link,:visited)::after{
+        width: 100px;
     }
 }

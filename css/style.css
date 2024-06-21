@@ -133,7 +133,7 @@ ul.list-style-none {
     display: inline-block;
     height: 1px;
     background-color: #cccccc;
-    width: 600px;
+    width: 500px;
     position: absolute;
     top: 50%;
     z-index: -1;
